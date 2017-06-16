@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void connect(View v){
         clientId = MqttClient.generateClientId();
-        client = new MqttAndroidClient(this.getApplicationContext(), "tcp://200.5.235.52:1883", clientId);
+        client = new MqttAndroidClient(this.getApplicationContext(), "tcp://IP:PORT", clientId);
 
         {
             try {
