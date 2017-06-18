@@ -7,6 +7,7 @@
     tools:context="net.chavezp.publishmqtt.MainActivity">
 
     <TextView
+        android:id="@+id/textview_estado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
@@ -23,13 +24,13 @@
         android:onClick="connect" />
 
     <Button
-        android:id="@+id/button_send"
+        android:id="@+id/button_luz_porton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_send"
+        android:onClick="sendMessage"
+        android:text="@string/button_luz_porton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:onClick="sendMessage" />
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

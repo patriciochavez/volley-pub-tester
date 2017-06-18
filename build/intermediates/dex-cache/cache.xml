@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\AppData\Local\Android\Sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_02e9b9654e667e90b880386f7614a9a3249ca448\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\.android\build-cache\fecfd115435fc75f8854aebd2897122dfa4d0555\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0a00f6faa2b1d5ecaa4f7349a4b833f70764a6d1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\.android\build-cache\e8ed62ff0f5aecbbe61adcf42956bcb4260a93a6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2bdea2a127313fe6f06bd03ca716d73b349dbb09\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\.android\build-cache\78afdae6083662775ac52c0faa7626aa04d29180\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c033b627ec80d227f5971ce500150479891c3c60\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\.android\build-cache\6fce21077fd88e067afe0817c5d365acabcc19ab\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f0f0d7524d8a2c3b6deeb0db503674abf69dda9b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\.android\build-cache\f2ca0abbd66259403482d9a5bd16247e191f34d5\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b8105c91ee67c8663acf9c8bb289a6787fc8e955\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\.android\build-cache\63398c42a34149be8f6b20aa51a025e15fb747bb\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fbbf45601b329b38fe7f45ec7e5ac41aa28078c1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\.gradle\caches\modules-2\files-2.1\org.eclipse.paho\org.eclipse.paho.android.service\1.0.3-SNAPSHOT\306f4b0f9020bd1f5e77e84dc1ee44ca5864194a\org.eclipse.paho.android.service-1.0.3-SNAPSHOT.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="306f4b0f9020bd1f5e77e84dc1ee44ca5864194a">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\org.eclipse.paho.android.service-1.0.3-SNAPSHOT_7581e1a3a13183e0c48b05a3f3e66eda21e81131\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\scripts\volley-pub-tester\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d16413a10293c48806fe4097a774e4147f8d9aee">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_a034fde961e1788132bcc57d93518dd467d9c8f5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\.android\build-cache\e931e1850090bda39fa63bd56c06cc0f914c29e4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7cb751b40f0bde4c0fcc3a37065609d4b40b79b5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_85986ce48449702d98c38139fa3925d36b91fe09\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\.gradle\caches\modules-2\files-2.1\org.eclipse.paho\org.eclipse.paho.client.mqttv3\1.0.3-SNAPSHOT\364bbb31f264b2de958c5a0437de478af18ae7\org.eclipse.paho.client.mqttv3-1.0.3-SNAPSHOT.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="00364bbb31f264b2de958c5a0437de478af18ae7">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\org.eclipse.paho.client.mqttv3-1.0.3-SNAPSHOT_3bfe094fcf7f0789f92c61cc487116a9f8744d1f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\.android\build-cache\4c87125af6017ed3b23b7c7297b5c8e272bf7569\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_81d6b5d637d6ad1889fcd1555f632ebb3e841831\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\scripts\volley-pub-tester\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_cc48d44b22a0b73186b6eb7c1ae3aaf3581dab0b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\.android\build-cache\1348f638244f16ee1f70742638ebc303c490409d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_03e79d8f42403b487c75adc0075417a944fc7654\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\pato\.android\build-cache\1e56bff114151fae3e41eb10d2ecbd20763c57cc\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_94f0d8e5a92a7aca777aa3539a79b362294bc749\classes.dex" />
+    </item>
+
+</items>
