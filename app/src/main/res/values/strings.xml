@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Casa</string>
     <string name="button_connect">Conectar</string>
-    <string name="button_luz_porton">Luz Portón</string>
+    <string name="button_luz_porton">Reflector</string>
 </resources>
