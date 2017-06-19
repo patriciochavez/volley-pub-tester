@@ -1,6 +1,7 @@
 package net.chavezp.publishmqtt;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,13 +26,13 @@ import java.io.UnsupportedEncodingException;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String STRING_CONN = "tcp://10.105.231.153:1883";
+    final String STRING_CONN = "tcp://IP:PORT";
     final String TAG = "casa";
 
     private String clientId;
     private Boolean iamconnected = false;
     private Button buttonConnect;
-    private Button buttonLuzPorton;
+    public static Button buttonLuzPorton;
 
     public static TextView textviewEstado;
     public MqttAndroidClient client;
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         buttonLuzPorton = (Button) findViewById(R.id.button_luz_porton);
         buttonLuzPorton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                publish("casa/luz/porton", "cambiar");
+                publish("casa/luz/porton", "1");
                 //getStatus(v);
             }
         });
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onSuccess(IMqttToken asyncActionToken) {
                         Log.d(TAG, "onSuccess");
                         iamconnected = true;
+                        suscribe("casa/#", 0);
                         refreshUI();
                     }
 
@@ -177,29 +179,8 @@ public class MainActivity extends AppCompatActivity {
                         });*/
                         //buttonLuzPorton.setEnabled(true);
 
-                        String topic = "casa/#";
-                        int qos = 0;
-                        try {
-                            final IMqttToken subToken = client.subscribe(topic, qos);
-                            subToken.setActionCallback(new IMqttActionListener() {
-                                @Override
-                                public void onSuccess(IMqttToken asyncActionToken) {
-                                    // The message was published
 
-                                    client.setCallback(new Suscripcion());
-                                }
 
-                                @Override
-                                public void onFailure(IMqttToken asyncActionToken,
-                                                      Throwable exception) {
-                                    // The subscription could not be performed, maybe the user was not
-                                    // authorized to subscribe on the specified topic e.g. using wildcards
-
-                                }
-                            });
-                        } catch (MqttException e) {
-                            e.printStackTrace();
-                            }
                 }
 
                     @Override
@@ -267,6 +248,29 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void suscribe(String topic, int qos){
+        try {
+            final IMqttToken subToken = client.subscribe(topic, qos);
+            subToken.setActionCallback(new IMqttActionListener() {
+                @Override
+                public void onSuccess(IMqttToken asyncActionToken) {
+                    client.setCallback(new Suscripcion());
+                }
+
+                @Override
+                public void onFailure(IMqttToken asyncActionToken,
+                                      Throwable exception) {
+                    // The subscription could not be performed, maybe the user was not
+                    // authorized to subscribe on the specified topic e.g. using wildcards
+
+                }
+            });
+        } catch (MqttException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void getStatus(String topic, String payload) {
