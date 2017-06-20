@@ -3,39 +3,39 @@
 
     <item
         is-multidex="true"
-        jar="C:\Scripts\volley-pub-tester\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="D:\scripts\volley-pub-tester\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="02340c509262810416199d6619f8de7e99ab21aa">
-        <dex dex="C:\Scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_3b8a13f26ee73144f7fcdc4dd3a80c1f86a9c701\classes.dex" />
+        sha1="d16413a10293c48806fe4097a774e4147f8d9aee">
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_a034fde961e1788132bcc57d93518dd467d9c8f5\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\chavezp\.gradle\caches\modules-2\files-2.1\org.eclipse.paho\org.eclipse.paho.client.mqttv3\1.0.3-SNAPSHOT\364bbb31f264b2de958c5a0437de478af18ae7\org.eclipse.paho.client.mqttv3-1.0.3-SNAPSHOT.jar"
+        jar="C:\Users\pato\.gradle\caches\modules-2\files-2.1\org.eclipse.paho\org.eclipse.paho.client.mqttv3\1.0.3-SNAPSHOT\364bbb31f264b2de958c5a0437de478af18ae7\org.eclipse.paho.client.mqttv3-1.0.3-SNAPSHOT.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="00364bbb31f264b2de958c5a0437de478af18ae7">
-        <dex dex="C:\Scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\org.eclipse.paho.client.mqttv3-1.0.3-SNAPSHOT_e92d3bce5f2cd58855f948dd974cc009a5fdfe12\classes.dex" />
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\org.eclipse.paho.client.mqttv3-1.0.3-SNAPSHOT_3bfe094fcf7f0789f92c61cc487116a9f8744d1f\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Scripts\volley-pub-tester\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="D:\scripts\volley-pub-tester\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_fc8a6b93733136611050b9353b7915d0cc726b62\classes.dex" />
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_cc48d44b22a0b73186b6eb7c1ae3aaf3581dab0b\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\chavezp\.gradle\caches\modules-2\files-2.1\org.eclipse.paho\org.eclipse.paho.android.service\1.0.3-SNAPSHOT\306f4b0f9020bd1f5e77e84dc1ee44ca5864194a\org.eclipse.paho.android.service-1.0.3-SNAPSHOT.jar"
+        jar="C:\Users\pato\.gradle\caches\modules-2\files-2.1\org.eclipse.paho\org.eclipse.paho.android.service\1.0.3-SNAPSHOT\306f4b0f9020bd1f5e77e84dc1ee44ca5864194a\org.eclipse.paho.android.service-1.0.3-SNAPSHOT.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="306f4b0f9020bd1f5e77e84dc1ee44ca5864194a">
-        <dex dex="C:\Scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\org.eclipse.paho.android.service-1.0.3-SNAPSHOT_50316045352e8079f03d437e51d8a50873ed9d2f\classes.dex" />
+        <dex dex="D:\scripts\volley-pub-tester\app\build\intermediates\transforms\dex\debug\folders\1000\10\org.eclipse.paho.android.service-1.0.3-SNAPSHOT_7581e1a3a13183e0c48b05a3f3e66eda21e81131\classes.dex" />
     </item>
 
 </items>

@@ -8,6 +8,7 @@ import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
+import static net.chavezp.publishmqtt.MainActivity.buttonTemperatura;
 import static net.chavezp.publishmqtt.MainActivity.textviewEstado;
 import static net.chavezp.publishmqtt.MainActivity.buttonLuzPorton;
 
@@ -29,12 +30,19 @@ public class Suscripcion extends Activity implements MqttCallback{
 
         if (topic.contains("casa/luz/porton")){
             if (response.contains("encendido")){
-                buttonLuzPorton.setBackgroundColor(Color.GREEN);
-                } else {
-                    buttonLuzPorton.setBackgroundColor(Color.GRAY);
+                buttonLuzPorton.setBackgroundColor(Color.argb(100, 0, 255, 128));
+                buttonLuzPorton.setText("Reflector Encendido");
                 }
+            else {
+                buttonLuzPorton.setBackgroundColor(Color.GRAY);
+                buttonLuzPorton.setText("Reflector Apagado");
+                    }
         }
-        textviewEstado.setText(new String(message.getPayload()));
+        if (topic.contains("casa/temperatura/living")){
+            buttonTemperatura.setBackgroundColor(Color.argb(100, 255, 0, 128));
+            buttonTemperatura.setText(response + " °C");
+        }
+        //textviewEstado.setText(response);
 
     }
 

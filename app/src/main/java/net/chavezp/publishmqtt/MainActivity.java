@@ -26,14 +26,14 @@ import java.io.UnsupportedEncodingException;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String STRING_CONN = "tcp://IP:PORT";
+    final String STRING_CONN = "tcp://200.5.235.52:1883";
     final String TAG = "casa";
 
     private String clientId;
     private Boolean iamconnected = false;
     private Button buttonConnect;
+    public static Button buttonTemperatura;
     public static Button buttonLuzPorton;
-
     public static TextView textviewEstado;
     public MqttAndroidClient client;
 
@@ -51,11 +51,17 @@ public class MainActivity extends AppCompatActivity {
 
         textviewEstado = (TextView) findViewById(R.id.textview_estado);
 
+        buttonTemperatura = (Button) findViewById(R.id.button_temperatura);
+        buttonTemperatura.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                publish("casa/temperatura/living", "0");
+            }
+        });
+
         buttonLuzPorton = (Button) findViewById(R.id.button_luz_porton);
         buttonLuzPorton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 publish("casa/luz/porton", "1");
-                //getStatus(v);
             }
         });
 
@@ -72,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void connect() {
         if (iamconnected) return;
-        //getStatus("casa/estado", "todo");
 
         clientId = MqttClient.generateClientId();
         client = new MqttAndroidClient(this.getApplicationContext(), STRING_CONN, clientId);
@@ -91,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
                         iamconnected = true;
                         suscribe("casa/#", 0);
                         refreshUI();
+                        publish("casa/luz/porton", "0");
+                        publish("casa/temperatura/living", "0");
                     }
 
                     @Override
@@ -135,70 +142,13 @@ public class MainActivity extends AppCompatActivity {
         }
         //Temperature
 
-        //Ligth
+        //Light
 
         //Buzzer
     }
 
-
-    public void connect(View v) {
-        if (iamconnected) return;
-
-        clientId = MqttClient.generateClientId();
-        client = new MqttAndroidClient(this.getApplicationContext(), STRING_CONN, clientId);
-        MqttConnectOptions options = new MqttConnectOptions();
-
-        options.setUserName("mi_usuario");
-        options.setPassword("mi_clave".toCharArray());
-
-        {
-            try {
-                IMqttToken token = client.connect(options);
-                token.setActionCallback(new IMqttActionListener() {
-                    @Override
-                    public void onSuccess(IMqttToken asyncActionToken) {
-                        // We are connected
-                        Log.d(TAG, "onSuccess");
-                        iamconnected = true;
-                        /*buttonConnect.setText("Desconectar");
-                        buttonConnect.setOnClickListener(new View.OnClickListener() {
-                            public void onClick(View v) {
-                                // Do something in response to button click
-                                disconnect(v);
-                                //Log.d(TAG,"Boton presionado");
-                            }
-                        });*/
-
-                        /*buttonConnect.setText("Desconectar");
-                        buttonConnect.setOnClickListener(new View.OnClickListener() {
-                            public void onClick(View v) {
-                                // Do something in response to button click
-                                disconnect(v);
-                                //Log.d(TAG,"Boton presionado");
-                            }
-                        });*/
-                        //buttonLuzPorton.setEnabled(true);
-
-
-
-                }
-
-                    @Override
-                    public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                        // Something went wrong e.g. connection timeout or firewall problems
-                        Log.d(TAG, "onFailure");
-                        //iamconnected = false;
-                        //buttonConnect.setText("Conectar");
-                        //buttonLuzPorton.setEnabled(false);
-                    }
-                });
-            } catch (MqttException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
     public void disconnect() {
+        if (!iamconnected) return;
         try {
             IMqttToken disconToken = client.disconnect();
             disconToken.setActionCallback(new IMqttActionListener() {
@@ -206,12 +156,13 @@ public class MainActivity extends AppCompatActivity {
                 public void onSuccess(IMqttToken asyncActionToken) {
                     iamconnected = false;
                     refreshUI();
+
                 }
 
                 @Override
                 public void onFailure(IMqttToken asyncActionToken,
                                       Throwable exception) {
-                    refreshUI();
+                    //refreshUI();
                 }
             });
         } catch (MqttException e) {
@@ -220,24 +171,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void sendMessage(View view) {
-
-        String topic = "casa/luz/porton";
-        String payload = "a";
-        byte[] encodedPayload = new byte[0];
-        {
-            try {
-                encodedPayload = payload.getBytes("UTF-8");
-                MqttMessage message = new MqttMessage(encodedPayload);
-                client.publish(topic, message);
-            } catch (UnsupportedEncodingException | MqttException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void publish(String topic, String payload) {
-
+ public void publish(String topic, String payload) {
         byte[] encodedPayload = new byte[0];
         {
             try {
@@ -269,32 +203,6 @@ public class MainActivity extends AppCompatActivity {
             });
         } catch (MqttException e) {
             e.printStackTrace();
-        }
-
-    }
-
-    public void getStatus(String topic, String payload) {
-
-        if (!iamconnected) {
-            Context context = getApplicationContext();
-            CharSequence text = "No conectado!";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-
-            return;
-        } else {
-        byte[] encodedPayload = new byte[0];
-        {
-            try {
-                encodedPayload = payload.getBytes("UTF-8");
-                MqttMessage message = new MqttMessage(encodedPayload);
-                client.publish(topic, message);
-            } catch (UnsupportedEncodingException | MqttException e) {
-                e.printStackTrace();
-            }
-            }
         }
     }
 }
