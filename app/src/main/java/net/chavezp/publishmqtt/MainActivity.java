@@ -54,14 +54,14 @@ public class MainActivity extends AppCompatActivity {
         buttonTemperatura = (Button) findViewById(R.id.button_temperatura);
         buttonTemperatura.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                publish("casa/temperatura/living", "0");
+                if (iamconnected) publish("casa/temperatura/living", "0");
             }
         });
 
         buttonLuzPorton = (Button) findViewById(R.id.button_luz_porton);
         buttonLuzPorton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                publish("casa/luz/porton", "1");
+                if (iamconnected) publish("casa/luz/porton", "1");
             }
         });
 
@@ -119,12 +119,15 @@ public class MainActivity extends AppCompatActivity {
             buttonConnect.setText("Desconectar");
             buttonConnect.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    disconnect();
+                    if (iamconnected) disconnect();
                 }
             });
 
             //Light button
             buttonLuzPorton.setEnabled(true);
+
+            //Temperature button
+            buttonTemperatura.setEnabled(true);
         }
         //Not connected
         else {
@@ -132,13 +135,16 @@ public class MainActivity extends AppCompatActivity {
             buttonConnect.setText("Conectar");
             buttonConnect.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    connect();
+
+                    if (!iamconnected) connect();
                 }
             });
 
             //Light button
             buttonLuzPorton.setEnabled(false);
 
+            //Temperature button
+            buttonTemperatura.setEnabled(false);
         }
         //Temperature
 

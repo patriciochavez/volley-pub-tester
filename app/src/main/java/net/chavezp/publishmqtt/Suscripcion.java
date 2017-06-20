@@ -40,7 +40,7 @@ public class Suscripcion extends Activity implements MqttCallback{
         }
         if (topic.contains("casa/temperatura/living")){
             buttonTemperatura.setBackgroundColor(Color.argb(100, 255, 0, 128));
-            buttonTemperatura.setText(response + " °C");
+            buttonTemperatura.setText("Living: " + response + " °C");
         }
         //textviewEstado.setText(response);
 
