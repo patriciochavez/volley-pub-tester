@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonConnect;
     public static Button buttonTemperatura;
     public static Button buttonLuzPorton;
+    public static Button buttonBuzzer;
     public static TextView textviewEstado;
     public MqttAndroidClient client;
 
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         buttonTemperatura = (Button) findViewById(R.id.button_temperatura);
         buttonTemperatura.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (iamconnected) publish("casa/temperatura/living", "0");
+                if (iamconnected) publish("casa/estado/temperatura", "0");
             }
         });
 
@@ -62,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
         buttonLuzPorton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (iamconnected) publish("casa/luz/porton", "1");
+            }
+        });
+
+        buttonBuzzer = (Button) findViewById(R.id.button_buzzer);
+        buttonBuzzer.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (iamconnected) publish("casa/buzzer/sonido", "1");
             }
         });
 
@@ -97,7 +105,8 @@ public class MainActivity extends AppCompatActivity {
                         suscribe("casa/#", 0);
                         refreshUI();
                         publish("casa/luz/porton", "0");
-                        publish("casa/temperatura/living", "0");
+                        publish("casa/estado/temperatura", "0");
+                        publish("casa/estado/buzzer", "0");
                     }
 
                     @Override
@@ -128,6 +137,9 @@ public class MainActivity extends AppCompatActivity {
 
             //Temperature button
             buttonTemperatura.setEnabled(true);
+
+            //Sound button
+            buttonBuzzer.setEnabled(true);
         }
         //Not connected
         else {
@@ -145,12 +157,10 @@ public class MainActivity extends AppCompatActivity {
 
             //Temperature button
             buttonTemperatura.setEnabled(false);
+
+            //Sound button
+            buttonBuzzer.setEnabled(false);
         }
-        //Temperature
-
-        //Light
-
-        //Buzzer
     }
 
     public void disconnect() {

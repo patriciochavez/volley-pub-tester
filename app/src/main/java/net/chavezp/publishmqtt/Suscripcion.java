@@ -11,6 +11,7 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import static net.chavezp.publishmqtt.MainActivity.buttonTemperatura;
 import static net.chavezp.publishmqtt.MainActivity.textviewEstado;
 import static net.chavezp.publishmqtt.MainActivity.buttonLuzPorton;
+import static net.chavezp.publishmqtt.MainActivity.buttonBuzzer;
 
 
 /**
@@ -33,7 +34,7 @@ public class Suscripcion extends Activity implements MqttCallback{
                 buttonLuzPorton.setBackgroundColor(Color.argb(100, 0, 255, 128));
                 buttonLuzPorton.setText("Reflector Encendido");
                 }
-            else {
+            else if (response.contains("apagado")){
                 buttonLuzPorton.setBackgroundColor(Color.GRAY);
                 buttonLuzPorton.setText("Reflector Apagado");
                     }
@@ -42,9 +43,22 @@ public class Suscripcion extends Activity implements MqttCallback{
             buttonTemperatura.setBackgroundColor(Color.argb(100, 255, 0, 128));
             buttonTemperatura.setText("Living: " + response + " °C");
         }
+
         //textviewEstado.setText(response);
 
-    }
+        if (topic.contains("casa/buzzer/sonido")){
+            if (response.contains("encendido")){
+                buttonBuzzer.setBackgroundColor(Color.argb(100, 0, 255, 128));
+                buttonBuzzer.setText("Sonido Activado");
+            }
+            else if (response.contains("apagado")){
+                buttonBuzzer.setBackgroundColor(Color.GRAY);
+                buttonBuzzer.setText("Sonido Desactivado");
+                }
+            }
+
+
+        }
 
     @Override
     public void deliveryComplete(IMqttDeliveryToken token) {

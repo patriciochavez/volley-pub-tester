@@ -30,7 +30,16 @@
         android:text="@string/button_luz_porton"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="463dp" />
-
+    <Button
+        android:id="@+id/button_buzzer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button_luz_porton"
+        android:layout_weight="1"
+        android:text="@string/button_buzzer"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="463dp" />
     <TextView
         android:id="@+id/textview_estado"
         android:layout_width="wrap_content"

@@ -2,5 +2,6 @@
     <string name="app_name">Casa</string>
     <string name="button_connect">Conectar</string>
     <string name="button_temperatura">Actualizando temperatura</string>
-    <string name="button_luz_porton">Reflector</string>
+    <string name="button_luz_porton">Actualizando Reflector</string>
+    <string name="button_buzzer">Actualizando Sonido</string>
 </resources>
