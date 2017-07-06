@@ -9,6 +9,7 @@ import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 import static net.chavezp.publishmqtt.MainActivity.buttonTemperatura;
+import static net.chavezp.publishmqtt.MainActivity.buttonExterior;
 import static net.chavezp.publishmqtt.MainActivity.textviewEstado;
 import static net.chavezp.publishmqtt.MainActivity.buttonLuzPorton;
 import static net.chavezp.publishmqtt.MainActivity.buttonBuzzer;
@@ -42,6 +43,11 @@ public class Suscripcion extends Activity implements MqttCallback{
         if (topic.contains("casa/temperatura/living")){
             buttonTemperatura.setBackgroundColor(Color.argb(100, 255, 0, 128));
             buttonTemperatura.setText("Living: " + response + " °C");
+        }
+
+        if (topic.contains("casa/temperatura/exterior")){
+            buttonExterior.setBackgroundColor(Color.argb(200, 200, 128, 128));
+            buttonExterior.setText("Exterior: " + response + " °C");
         }
 
         //textviewEstado.setText(response);

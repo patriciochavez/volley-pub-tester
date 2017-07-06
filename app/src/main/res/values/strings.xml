@@ -4,4 +4,5 @@
     <string name="button_temperatura">Actualizando temperatura</string>
     <string name="button_luz_porton">Actualizando Reflector</string>
     <string name="button_buzzer">Actualizando Sonido</string>
+    <string name="button_exterior">Actualizando temperatura</string>
 </resources>

@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private Boolean iamconnected = false;
     private Button buttonConnect;
     public static Button buttonTemperatura;
+    public static Button buttonExterior;
     public static Button buttonLuzPorton;
     public static Button buttonBuzzer;
     public static TextView textviewEstado;
@@ -54,6 +55,13 @@ public class MainActivity extends AppCompatActivity {
 
         buttonTemperatura = (Button) findViewById(R.id.button_temperatura);
         buttonTemperatura.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (iamconnected) publish("casa/estado/temperatura", "0");
+            }
+        });
+
+        buttonExterior = (Button) findViewById(R.id.button_exterior);
+        buttonExterior.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (iamconnected) publish("casa/estado/temperatura", "0");
             }
@@ -135,8 +143,9 @@ public class MainActivity extends AppCompatActivity {
             //Light button
             buttonLuzPorton.setEnabled(true);
 
-            //Temperature button
+            //Temperature buttons
             buttonTemperatura.setEnabled(true);
+            buttonExterior.setEnabled(true);
 
             //Sound button
             buttonBuzzer.setEnabled(true);
@@ -155,8 +164,9 @@ public class MainActivity extends AppCompatActivity {
             //Light button
             buttonLuzPorton.setEnabled(false);
 
-            //Temperature button
+            //Temperature buttons
             buttonTemperatura.setEnabled(false);
+            buttonExterior.setEnabled(false);
 
             //Sound button
             buttonBuzzer.setEnabled(false);

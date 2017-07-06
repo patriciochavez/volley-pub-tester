@@ -13,10 +13,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textview_estado"
-        android:layout_marginTop="40dp"
+        android:layout_below="@+id/button_exterior"
+        android:layout_marginTop="0dp"
         android:layout_weight="1"
         android:text="@string/button_temperatura"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="463dp" />
+    <Button
+        android:id="@+id/button_exterior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textview_estado"
+        android:layout_marginTop="-25dp"
+        android:layout_weight="1"
+        android:text="@string/button_exterior"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="463dp" />
 
